@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const toggle = document.getElementById('enableToggle');
 	const statusIcon = document.getElementById('statusIcon');
 	const statusText = document.getElementById('statusText');
-	const helpLink = document.getElementById('helpLink');
-	const aboutLink = document.getElementById('aboutLink');
+	const githubLink = document.getElementById('githubLink');
+	const addonLink = document.getElementById('addonLink');
 
 	/**
 	 * Update UI based on extension state
@@ -111,40 +111,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 	});
 
 	/**
-	 * Help link handler
+	 * GitHub link handler
 	 */
-	helpLink.addEventListener('click', (event) => {
+	githubLink.addEventListener('click', (event) => {
 		event.preventDefault();
 		browser.tabs.create({
-			url: 'https://github.com/LabinatorSolutions/youtube-uninterrupted#troubleshooting'
+			url: 'https://github.com/LabinatorSolutions/youtube-uninterrupted'
 		});
 	});
 
 	/**
-	 * About link handler
+	 * Add-on Page link handler
 	 */
-	aboutLink.addEventListener('click', (event) => {
+	addonLink.addEventListener('click', (event) => {
 		event.preventDefault();
-		const aboutMessage = `
-YouTube Uninterrupted v1.0.0
-
-Prevents YouTube from pausing videos with the "Continue watching?" dialog.
-
-Features:
-• Automatic dialog removal
-• Works on desktop and mobile
-• Minimal permissions
-• No data collection
-
-This extension does NOT block ads or affect YouTube's monetization.
-
-Privacy: This extension does not collect, store, or transmit any data.
-All processing happens locally in your browser.
-
-License: MIT
-    `.trim();
-
-		alert(aboutMessage);
+		browser.tabs.create({
+			url: 'https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted'
+		});
 	});
 
 	// Initialize

@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "YouTube Uninterrupted",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"author": "YouTube Uninterrupted Contributors",
 	"homepage_url": "https://github.com/LabinatorSolutions/youtube-uninterrupted",
 	"description": "Prevents YouTube from pausing videos with the 'Continue watching?' dialog, allowing uninterrupted playback of music, podcasts, and long-form content.",

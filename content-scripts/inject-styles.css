@@ -9,61 +9,9 @@
  */
 
 /* ==========================================================================
-   PRIMARY DIALOG SELECTORS - Known YouTube dialog containers
-   ========================================================================== */
-
-/* Hide YouTube pause dialog containers */
-ytd-popup-container,
-tp-yt-paper-dialog,
-.ytd-popup-container,
-yt-confirm-dialog-renderer,
-ytd-enforcement-message-view-model {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  z-index: -9999 !important;
-}
-
-/* ==========================================================================
-   BACKDROP AND OVERLAY SELECTORS
-   ========================================================================== */
-
-/* Hide dialog backdrops/overlays */
-tp-yt-iron-overlay-backdrop,
-.scrim,
-.ytd-popup-container .scrim,
-iron-overlay-backdrop {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  background: transparent !important;
-}
-
-/* ==========================================================================
-   POLYMER AND PAPER ELEMENT SELECTORS
-   ========================================================================== */
-
-/* Hide any paper-dialog instances used by YouTube */
-paper-dialog,
-tp-yt-paper-dialog,
-yt-dialog-overlay {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* ==========================================================================
    ARIA-BASED FALLBACK SELECTORS
    These target dialogs based on accessibility attributes for resilience
    ========================================================================== */
-
-/* Target modal dialogs - JavaScript verifies content before hiding */
-[role="dialog"][aria-modal="true"]:not(#movie_player):not(.ytp-popup) {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
 
 /* Target alertdialog elements that may be used for interruptions */
 [role="alertdialog"]:not(.ytp-popup) {
