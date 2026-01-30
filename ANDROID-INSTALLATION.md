@@ -1,4 +1,4 @@
-# Firefox Android Installation Guide
+# YouTube Uninterrupted - Android Installation Guide
 
 Complete step-by-step instructions for installing YouTube Continue Watching on Firefox for Android.
 
@@ -96,7 +96,7 @@ For testing, you can use any public extension to verify your setup works:
 4. Click "Add to collection"
 5. Select your collection
 
-Once you verify the setup works, submit your YouTube Continue Watching extension as described in Option A.
+Once you verify the setup works, submit your YouTube Uninterrupted extension as described in Option A.
 
 ### Part 4: Configure Firefox Android
 

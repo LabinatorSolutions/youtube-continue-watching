@@ -1,6 +1,6 @@
 # Development Guide
 
-Guide for developers who want to modify, improve, or contribute to YouTube Continue Watching.
+Guide for developers who want to modify, improve, or contribute to YouTube Uninterrupted.
 
 ## 🛠️ Development Setup
 
@@ -36,7 +36,7 @@ Guide for developers who want to modify, improve, or contribute to YouTube Conti
 
 4. **Open Console**
    - Press F12 on any YouTube page
-   - Console tab will show debug logs: `[YouTube Continue] ...`
+   - Console tab will show debug logs: `[YouTube Uninterrupted] ...`
 
 ## 📁 Project Structure
 
@@ -338,7 +338,7 @@ zip -r youtube-continue-watching-v1.0.0.zip . \
 1. Go to: https://addons.mozilla.org/developers/
 2. Upload ZIP file
 3. Fill in metadata:
-   - Name: YouTube Continue Watching
+   - Name: YouTube Uninterrupted
    - Summary: Prevents "Continue watching?" dialog
    - Description: See README.md
    - Categories: Social & Communication, Video
@@ -366,7 +366,7 @@ zip -r youtube-continue-watching-v1.0.0.zip . \
 **Debug Steps:**
 1. Open console (F12)
 2. Enable debug mode (`CONFIG.DEBUG = true`)
-3. Look for: `[YouTube Continue] ...` messages
+3. Look for: `[YouTube Uninterrupted] ...` messages
 4. Check if dialog is being detected
 5. Verify selectors match current YouTube DOM
 

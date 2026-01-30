@@ -1,10 +1,10 @@
 /**
- * YouTube Continue Watching - Popup Script
+ * YouTube Uninterrupted - Popup Script
  * 
  * Handles popup UI interactions and state management
  * 
  * SPDX-License-Identifier: AGPL-3.0-or-later
- * Copyright (C) 2026 YouTube Continue Watching Contributors
+ * Copyright (C) 2026 YouTube Uninterrupted Contributors
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	aboutLink.addEventListener('click', (event) => {
 		event.preventDefault();
 		const aboutMessage = `
-YouTube Continue Watching v1.0.0
+YouTube Uninterrupted v1.0.0
 
 Prevents YouTube from pausing videos with the "Continue watching?" dialog.
 

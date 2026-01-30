@@ -1,4 +1,4 @@
-# YouTube Continue Watching
+# YouTube Uninterrupted
 
 A Firefox extension that prevents YouTube from interrupting your viewing experience with the "Continue watching?" dialog. Perfect for music playlists, podcasts, long-form content, and ambient videos.
 
@@ -142,7 +142,7 @@ Periodically simulates minimal user activity (mouse movement event) to reset You
 **Solutions:**
 1. Check if extension is installed
    - Go to `about:addons`
-   - Look for "YouTube Continue Watching"
+   - Look for "YouTube Uninterrupted"
    
 2. Pin the extension to toolbar
    - Right-click toolbar → Customize Toolbar
@@ -270,11 +270,11 @@ The extension implements three defensive layers:
 
 ### Compatibility
 
-| Platform        | Minimum Version | Status            |
-| --------------- | --------------- | ----------------- |
-| Firefox Desktop | 115.0           | ✅ Fully supported |
-| Firefox Android | 120.0           | ✅ Fully supported |
-| Firefox Nightly | Latest          | ✅ Fully supported |
+| Platform        | Minimum Version | Status          |
+| --------------- | --------------- | --------------- |
+| Firefox Desktop | 147.0           | Fully supported |
+| Firefox Android | 147.0           | Fully supported |
+| Firefox Nightly | Latest          | Fully supported |
 
 ## 🤝 Contributing
 
@@ -308,7 +308,7 @@ Contributions are welcome! Here's how you can help:
 
 GNU Affero General Public License v3.0
 
-Copyright (c) 2026 YouTube Continue Watching Contributors
+Copyright (c) 2026 YouTube Uninterrupted Contributors
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -329,8 +329,7 @@ Developed by the team behind [Labinator](https://Labinator.com).
 
 ## 📞 Support
 
-- **Issues:** https://github.com/yourusername/youtube-continue-watching/issues
-- **Discussions:** https://github.com/yourusername/youtube-continue-watching/discussions
+- **Issues:** https://github.com/LabinatorSolutions/youtube-continue-watching/issues
 
 ## ⚠️ Ethical Use & Responsibility
 

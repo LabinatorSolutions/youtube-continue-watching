@@ -1,6 +1,6 @@
 # Testing Checklist
 
-Use this checklist to verify the YouTube Continue Watching extension is working correctly.
+Use this checklist to verify the YouTube Uninterrupted extension is working correctly.
 
 ## Pre-Installation Tests
 
@@ -146,9 +146,9 @@ Use this checklist to verify the YouTube Continue Watching extension is working 
 - [ ] **Check Console Logs**
   - [ ] Open YouTube
   - [ ] Open browser console (F12)
-  - [ ] Should see: `[YouTube Continue] Initializing...`
-  - [ ] Should see: `[YouTube Continue] DOM observer initialized`
-  - [ ] Should see: `[YouTube Continue] Activity simulator initialized`
+  - [ ] Verify logs appear: `[YouTube Uninterrupted] Initializing...`
+  - [ ] Should see: `[YouTube Uninterrupted] DOM observer initialized`
+  - [ ] Should see: `[YouTube Uninterrupted] Activity simulator initialized`
 
 - [ ] **Monitor During Playback**
   - [ ] Watch console during video playback

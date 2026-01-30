@@ -1,5 +1,5 @@
 /**
- * YouTube Continue Watching - Content Script
+ * YouTube Uninterrupted - Content Script
  * 
  * Prevents YouTube's "Continue watching?" interruption dialog through
  * multiple defensive layers: CSS hiding, DOM monitoring, activity simulation,
@@ -12,7 +12,7 @@
  * - Layer 4: Video state monitoring (detects paused state and resumes)
  * 
  * SPDX-License-Identifier: AGPL-3.0-or-later
- * Copyright (C) 2026 YouTube Continue Watching Contributors
+ * Copyright (C) 2026 YouTube Uninterrupted Contributors
  */
 
 (function () {
@@ -102,7 +102,7 @@
 	 */
 	function log(...args) {
 		if (CONFIG.DEBUG) {
-			console.log('[YouTube Continue]', new Date().toISOString(), ...args);
+			console.log('[YouTube Uninterrupted]', new Date().toISOString(), ...args);
 		}
 	}
 
@@ -110,7 +110,7 @@
 	 * Warning logging - always logs important warnings
 	 */
 	function warn(...args) {
-		console.warn('[YouTube Continue]', ...args);
+		console.warn('[YouTube Uninterrupted]', ...args);
 	}
 
 	/**

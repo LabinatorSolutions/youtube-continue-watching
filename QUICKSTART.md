@@ -1,38 +1,36 @@
-# Quick Start Guide
-
-Get YouTube Continue Watching up and running in under 5 minutes.
+# 🚀 Quick Start: YouTube Uninterrupted up and running in under 5 minutes.
 
 ## 🚀 Firefox Desktop - Quick Install
 
-1. **Download or Clone**
-   ```bash
-   cd ~/Downloads
-   git clone https://github.com/yourusername/youtube-continue-watching.git
-   ```
+1.  **Download or Clone**
+    ```bash
+    cd ~/Downloads
+    git clone https://github.com/yourusername/youtube-uninterrupted.git
+    ```
 
-2. **Load Extension**
-   - Open Firefox
-   - Type in address bar: `about:debugging#/runtime/this-firefox`
-   - Click **"Load Temporary Add-on"**
-   - Navigate to extension folder
-   - Select `manifest.json`
-   - ✅ Done!
+2.  **Load Extension**
+    - Open Firefox
+    - Type in address bar: `about:debugging#/runtime/this-firefox`
+    - Click **"Load Temporary Add-on"**
+    - Navigate to extension folder
+    - Select `manifest.json`
+    - ✅ Done!
 
-3. **Test It**
-   - Go to youtube.com
-   - Play any video
-   - Walk away for 10 minutes
-   - No "Continue watching?" dialog!
+3.  **Test It**
+    - Go to youtube.com
+    - Play any video
+    - Walk away for 10 minutes
+    - No "Continue watching?" dialog!
 
 ## 📱 Firefox Android - Quick Install
 
 ### Short Version
 
-1. Create Firefox account
-2. Create add-on collection on addons.mozilla.org
-3. Enable debug menu in Firefox Android (tap logo 5 times)
-4. Configure custom collection
-5. Install extension from your collection
+1.  Create Firefox account
+2.  Create add-on collection on addons.mozilla.org
+3.  Enable debug menu in Firefox Android (tap logo 5 times)
+4.  Configure custom collection
+5.  Install extension from your collection
 
 ### Detailed Guide
 
@@ -49,21 +47,21 @@ The extension works out-of-the-box with no configuration needed!
 
 ## 🧪 Verify It's Working
 
-1. **Check Extension Status**
-   - Click extension icon
-   - Should say: "Active on YouTube pages"
-   - Toggle should be ON (red)
+1.  **Check Extension Status**
+    - Click extension icon
+    - Should say: "Active on YouTube pages"
+    - Toggle should be ON (red)
 
-2. **Browser Console** (Optional)
-   - Press F12 → Console tab
-   - Look for: `[YouTube Continue] Initializing...`
-   - Look for: `[YouTube Continue] Initialization complete`
+2.  **Browser Console** (Optional)
+    - Press F12 → Console tab
+    - Look for: `[YouTube Uninterrupted] Initializing...`
+    - Look for: `[YouTube Uninterrupted] Initialization complete`
 
-3. **Live Test**
-   - Go to YouTube
-   - Play a video
-   - Leave it running (don't interact)
-   - After 5-10 minutes, no dialog should appear
+3.  **Live Test**
+    - Go to YouTube
+    - Play a video
+    - Leave it running (don't interact)
+    - After 5-10 minutes, no dialog should appear
 
 ## 🎯 What You Should See
 
@@ -86,7 +84,7 @@ The extension works out-of-the-box with no configuration needed!
 
 **Extension icon not visible?**
 - Go to `about:addons`
-- Find "YouTube Continue Watching"
+- Find "YouTube Uninterrupted"
 - Verify it's enabled
 
 **Not working on mobile?**

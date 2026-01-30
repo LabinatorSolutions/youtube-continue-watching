@@ -1,10 +1,10 @@
 /**
- * YouTube Continue Watching - Background Service Worker
+ * YouTube Uninterrupted - Background Service Worker
  * 
  * Manages extension state and handles communication between popup and content scripts
  * 
  * SPDX-License-Identifier: AGPL-3.0-or-later
- * Copyright (C) 2026 YouTube Continue Watching Contributors
+ * Copyright (C) 2026 YouTube Uninterrupted Contributors
  */
 
 // Extension state
@@ -14,7 +14,7 @@ let extensionState = {
 
 // Initialize extension on install
 browser.runtime.onInstalled.addListener(() => {
-	console.log('[YouTube Continue] Extension installed');
+	console.log('[YouTube Uninterrupted] Extension installed');
 
 	// Set default state
 	browser.storage.local.set({ enabled: true });
@@ -71,4 +71,4 @@ browser.storage.onChanged.addListener((changes, area) => {
 	}
 });
 
-console.log('[YouTube Continue] Background service worker initialized');
+console.log('[YouTube Uninterrupted] Background service worker initialized');

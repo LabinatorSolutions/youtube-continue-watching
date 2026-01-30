@@ -1,4 +1,4 @@
-# 📦 YouTube Continue Watching - Complete Extension Package
+# 📦 YouTube Uninterrupted - Complete Extension Package
 
 ## 🎯 What This Extension Does
 
@@ -100,7 +100,7 @@ See `ANDROID-INSTALLATION.md` for complete guide.
 | Code Lines      | ~930 lines            |
 | Dependencies    | 0 (vanilla JS)        |
 | Permissions     | 2 (storage + YouTube) |
-| Browser Support | Firefox 115+          |
+| Browser Support | Firefox 147+          |
 | Mobile Support  | ✅ Yes                 |
 | Data Collection | ❌ None                |
 
