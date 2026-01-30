@@ -6,7 +6,7 @@ Guide for developers who want to modify, improve, or contribute to YouTube Unint
 
 ### Prerequisites
 
-- Firefox Browser (115+)
+- Firefox Browser (147+)
 - Text editor or IDE (VS Code recommended)
 - Git (for version control)
 - Basic knowledge of:
