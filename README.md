@@ -325,12 +325,23 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ## 🙏 Credits
 
-Created with ❤️ for uninterrupted YouTube viewing.
+Developed by the team behind [Labinator](https://Labinator.com).
 
 ## 📞 Support
 
 - **Issues:** https://github.com/yourusername/youtube-continue-watching/issues
 - **Discussions:** https://github.com/yourusername/youtube-continue-watching/discussions
+
+## ⚠️ Ethical Use & Responsibility
+
+This extension is designed strictly to enhance the experience for valid users who are actively listening to or watching content but cannot interact with their device (e.g., while cooking, exercising, working, or sleeping).
+
+**Please use this tool responsibly.** It is **NOT** intended to:
+- Artificially inflate view counts or engagement metrics
+- Abuse YouTube's bandwidth or server resources
+- Circumvent policies when no user is actually present or consuming content
+
+We strongly encourage users to respect the platform and its creators. If you are no longer consuming content, please pause the video or close the tab manually.
 
 ## ⚠️ Disclaimer
 
