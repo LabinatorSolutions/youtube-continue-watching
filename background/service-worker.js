@@ -55,12 +55,14 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	}
 });
 
-// Update extension icon based on state (optional enhancement)
+// Update extension icon/badge based on state
 function updateIcon(enabled) {
-	const iconPath = enabled ? 'icons/icon-48.png' : 'icons/icon-48-disabled.png';
-	browser.action.setIcon({ path: iconPath }).catch(() => {
-		// Disabled icon doesn't exist yet, ignore
-	});
+	if (enabled) {
+		browser.action.setBadgeText({ text: '' });
+	} else {
+		browser.action.setBadgeText({ text: 'OFF' });
+		browser.action.setBadgeBackgroundColor({ color: '#666666' });
+	}
 }
 
 // Listen for storage changes

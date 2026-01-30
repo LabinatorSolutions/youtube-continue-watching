@@ -7,6 +7,8 @@ A Firefox extension that prevents YouTube from interrupting your viewing experie
        alt="Get YouTube Uninterrupted Add-on for Firefox" />
 </a>
 
+**Current Version:** v1.4.0
+
 ## 🎯 Purpose
 
 YouTube automatically pauses videos after a period of inactivity and displays a "Video paused. Continue watching?" prompt. This extension removes that interruption, allowing uninterrupted playback for legitimate use cases such as:
@@ -140,6 +142,7 @@ Periodically simulates minimal user activity (mouse movement event) to reset You
 4. Check Firefox console for errors
    - Press F12 → Console tab
    - Look for errors starting with `[YouTube Continue]`
+
 
 ### Extension Icon Not Visible (Desktop)
 

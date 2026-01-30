@@ -90,7 +90,7 @@
 	let activityIntervalId = null;
 	let videoCheckIntervalId = null;
 	let scanIntervalId = null;
-	let lastVideoTime = 0;
+
 	let lastInterruptionHandled = 0; // Timestamp of last successful dialog removal
 
 	// ============================================================================
@@ -528,7 +528,7 @@
 				}
 			}
 
-			lastVideoTime = video.currentTime;
+
 		} catch (error) {
 			log('Error checking video state:', error);
 		}

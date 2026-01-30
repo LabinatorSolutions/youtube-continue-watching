@@ -235,7 +235,7 @@ If YouTube changes their dialog structure:
 
 2. **Update Selectors**
    ```javascript
-   // In youtube-continue.js
+   // In youtube-uninterrupted.js
    DIALOG_SELECTORS: [
      'ytd-popup-container',
      'new-selector-here',  // ← Add new selector
@@ -275,7 +275,7 @@ ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes instead of 5
 
 2. **Track in Content Script**
    ```javascript
-   // In youtube-continue.js
+   // In youtube-uninterrupted.js
    function removePauseDialog(element) {
      // ... existing code ...
      browser.runtime.sendMessage({ 
@@ -326,7 +326,7 @@ CONFIG.DEBUG = false
 
 ```bash
 # Create ZIP file (excluding dev files)
-zip -r youtube-continue-watching-v1.0.0.zip . \
+zip -r youtube-uninterrupted-v1.4.0.zip . \
   -x "*.git*" \
   -x "*node_modules*" \
   -x "*.md" \

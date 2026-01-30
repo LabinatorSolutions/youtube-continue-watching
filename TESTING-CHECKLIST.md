@@ -61,13 +61,13 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
   - [ ] Open any YouTube video
   - [ ] Start playback
   - [ ] Do NOT interact with page for 5+ minutes
-  - [ ] ✅ No "Continue watching?" dialog appears
+  - [ ] No "Continue watching?" dialog appears
 
 - [ ] **Dialog Prevention - Long Test (15+ minutes)**
   - [ ] Open a long video or playlist
   - [ ] Start playback
   - [ ] Leave tab open but don't interact for 15+ minutes
-  - [ ] ✅ No interruption dialog
+  - [ ] No interruption dialog
   - [ ] Video continues playing
 
 - [ ] **Enable/Disable Toggle**
@@ -89,7 +89,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
   - [ ] Open youtube.com in Firefox Android
   - [ ] Extension toggle is ON
   - [ ] Play video without interaction
-  - [ ] ✅ No dialog appears after several minutes
+  - [ ] No dialog appears after several minutes
 
 ## Performance Tests
 
@@ -159,7 +159,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
 ## Compatibility Tests
 
 - [ ] **Firefox Versions**
-  - [ ] Test on Firefox 115+ (minimum version)
+  - [ ] Test on Firefox 147+ (minimum version)
   - [ ] Test on latest Firefox release
   - [ ] (Optional) Test on Firefox Nightly
 
@@ -199,7 +199,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
 - [ ] **Network Monitoring**
   - [ ] Open browser DevTools → Network tab
   - [ ] Use extension
-  - [ ] ✅ No outgoing network requests from extension
+  - [ ] No outgoing network requests from extension
   - [ ] No data sent to external servers
 
 - [ ] **Storage Inspection**
@@ -220,7 +220,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
   - [ ] Open YouTube
   - [ ] Start playing a music playlist
   - [ ] Leave it playing for 30+ minutes
-  - [ ] ✅ Uninterrupted playback - no dialogs
+  - [ ] Uninterrupted playback - no dialogs
   - [ ] Extension is working as expected
 
 - [ ] **User Acceptance**
