@@ -42,8 +42,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 		try {
 			const tabs = await browser.tabs.query({ active: true, currentWindow: true });
 			if (tabs.length > 0) {
-				const url = tabs[0].url;
-				return url.includes('youtube.com');
+				const urlStr = tabs[0].url;
+				try {
+					const parsedUrl = new URL(urlStr);
+					const hostname = parsedUrl.hostname;
+					return hostname === 'youtube.com' || hostname.endsWith('.youtube.com');
+				} catch (parseError) {
+					// Non-HTTP(S) or invalid URL, treat as not YouTube
+					console.warn('Unable to parse tab URL:', urlStr, parseError);
+					return false;
+				}
 			}
 		} catch (error) {
 			console.error('Error checking tab:', error);
