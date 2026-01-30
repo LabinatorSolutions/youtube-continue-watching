@@ -1,6 +1,6 @@
 # YouTube Uninterrupted - Android Installation Guide
 
-Complete step-by-step instructions for installing YouTube Continue Watching on Firefox for Android.
+Complete step-by-step instructions for installing YouTube Uninterrupted on Firefox for Android.
 
 ## Prerequisites
 
@@ -133,7 +133,7 @@ Once you verify the setup works, submit your YouTube Uninterrupted extension as 
 
 2. **Find Your Extension**
    - You should see extensions from your collection
-   - Find "YouTube Continue Watching"
+   - Find "YouTube Uninterrupted"
    - Tap it
 
 3. **Install**
@@ -142,7 +142,7 @@ Once you verify the setup works, submit your YouTube Uninterrupted extension as 
    - Tap "Add"
 
 4. **Verify Installation**
-   - You should see "YouTube Continue Watching added to Firefox"
+   - You should see "YouTube Uninterrupted added to Firefox"
    - It will appear in your add-ons list
 
 ### Part 6: Test It Works
@@ -153,7 +153,7 @@ Once you verify the setup works, submit your YouTube Uninterrupted extension as 
 
 2. **Verify Extension is Active**
    - Tap menu (⋮) → "Add-ons"
-   - Find "YouTube Continue Watching"
+   - Find "YouTube Uninterrupted"
    - Toggle should be ON
 
 3. **Test Functionality**
@@ -188,7 +188,7 @@ Once you verify the setup works, submit your YouTube Uninterrupted extension as 
 **Problem:** Dialog still appears
 
 **Solutions:**
-- Verify extension is enabled (Add-ons → YouTube Continue Watching → ON)
+- Verify extension is enabled (Add-ons → YouTube Uninterrupted → ON)
 - Reload the YouTube page
 - Clear Firefox cache: Settings → Delete browsing data
 - Disable and re-enable the extension

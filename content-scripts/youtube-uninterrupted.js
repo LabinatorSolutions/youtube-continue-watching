@@ -599,7 +599,7 @@
 	 * Initialize the extension
 	 */
 	function init() {
-		log('Initializing YouTube Continue Watching extension');
+		log('Initializing YouTube Uninterrupted extension');
 
 		// Load extension state from storage
 		browser.storage.local.get(['enabled']).then(result => {
