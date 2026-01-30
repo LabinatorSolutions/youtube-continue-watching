@@ -164,6 +164,16 @@
 		}
 	}
 
+	/**
+	 * Cryptographically secure random number between 0 (inclusive) and 1 (exclusive)
+	 * Replacement for Math.random() to satisfy security scanners
+	 */
+	function secureRandom() {
+		const array = new Uint32Array(1);
+		window.crypto.getRandomValues(array);
+		return array[0] / (0xFFFFFFFF + 1);
+	}
+
 	// ============================================================================
 	// LAYER 2: DOM MONITORING
 	// ============================================================================
@@ -441,8 +451,8 @@
 
 		try {
 			// Get a random position within viewport for more realistic events
-			const x = Math.floor(Math.random() * window.innerWidth);
-			const y = Math.floor(Math.random() * window.innerHeight);
+			const x = Math.floor(secureRandom() * window.innerWidth);
+			const y = Math.floor(secureRandom() * window.innerHeight);
 
 			// Simulate mouse movement
 			const mouseMoveEvent = new MouseEvent('mousemove', {
@@ -455,7 +465,7 @@
 			document.dispatchEvent(mouseMoveEvent);
 
 			// Occasionally simulate other events for variety
-			if (Math.random() < 0.3) {
+			if (secureRandom() < 0.3) {
 				const scrollEvent = new Event('scroll', { bubbles: true });
 				document.dispatchEvent(scrollEvent);
 			}
