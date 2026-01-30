@@ -91,7 +91,7 @@
 	let videoCheckIntervalId = null;
 	let scanIntervalId = null;
 	let lastVideoTime = 0;
-	let pauseDetectedTime = 0;
+	let lastInterruptionHandled = 0; // Timestamp of last successful dialog removal
 
 	// ============================================================================
 	// UTILITY FUNCTIONS
@@ -276,6 +276,9 @@
 		try {
 			log('Removing pause dialog:', element.tagName, element.className);
 
+			// Mark that we are handling an interruption right now
+			lastInterruptionHandled = Date.now();
+
 			// Strategy 1: Click the continue button first (cleanest solution)
 			let clicked = false;
 			for (const selector of CONFIG.CONTINUE_BUTTON_SELECTORS) {
@@ -358,8 +361,11 @@
 			if (dialogsFound > 0) {
 				log(`Scan complete: ${dialogsFound} dialog(s) removed`);
 			}
+
+			return dialogsFound > 0;
 		} catch (error) {
 			log('Error scanning for dialogs:', error);
+			return false;
 		}
 	}
 
@@ -499,40 +505,30 @@
 			const video = getVideoElement();
 			if (!video) return;
 
-			const currentTime = video.currentTime;
+			// If video is paused, checks if we need to resume it
+			if (video.paused && !video.ended && video.currentTime > 0) {
 
-			// If video is paused and time hasn't changed recently
-			if (video.paused && !video.ended && currentTime > 0) {
-				const timeSinceLastChange = Math.abs(currentTime - lastVideoTime);
+				// 1. Check for any dialogs right now
+				const dialogFoundNow = scanAndRemoveDialogs();
 
-				// If video time hasn't changed and we're paused, might be the dialog
-				if (timeSinceLastChange < 0.1) {
-					if (pauseDetectedTime === 0) {
-						pauseDetectedTime = Date.now();
-						log('Pause detected, monitoring...');
-					} else if (Date.now() - pauseDetectedTime > 1000) {
-						// Paused for more than 1 second, check for dialog
-						scanAndRemoveDialogs();
+				// 2. Determine if we should resume
+				// We resume IF we just found a dialog OR if we handled one very recently (last 2 seconds)
+				const timeSinceLastHandled = Date.now() - lastInterruptionHandled;
+				const wasRecentlyHandled = timeSinceLastHandled < 2000;
 
-						// Try to resume video if no visible pause UI
-						const isUserPause = document.querySelector('.ytp-pause-overlay:not([style*="display: none"])');
-						if (!isUserPause) {
-							log('Attempting to resume video');
-							video.play().catch(e => {
-								log('Could not auto-resume video:', e);
-							});
-						}
-
-						pauseDetectedTime = 0;
-					}
+				if (dialogFoundNow || wasRecentlyHandled) {
+					log('Resuming video (interruption detected/handled)');
+					video.play().catch(e => {
+						log('Could not auto-resume video:', e);
+					});
 				} else {
-					pauseDetectedTime = 0;
+					// Otherwise, assume it's a legitimate user pause and do nothing.
+					// We no longer rely on heuristics like checking for UI overlays, 
+					// which are prone to false negatives.
 				}
-			} else {
-				pauseDetectedTime = 0;
 			}
 
-			lastVideoTime = currentTime;
+			lastVideoTime = video.currentTime;
 		} catch (error) {
 			log('Error checking video state:', error);
 		}
