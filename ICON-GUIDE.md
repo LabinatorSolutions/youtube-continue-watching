@@ -7,7 +7,7 @@ This extension requires three icon sizes for Firefox:
 1. **icon-16.png** - 16x16 pixels
    - Used in: Extension toolbar (small displays)
    
-2. **icon-48.png** - 48x48 pixels  
+2. **icon-48.png** - 48x48 pixels
    - Used in: Extension toolbar (normal displays), popup header
    
 3. **icon-128.png** - 128x128 pixels
