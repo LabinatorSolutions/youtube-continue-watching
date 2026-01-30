@@ -40,14 +40,13 @@
 		}
 	],
 	"background": {
-		"scripts": [
-			"background/service-worker.js"
-		]
+		"service_worker": "background/service-worker.js"
 	},
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "youtube-continue-watching@example.com",
-			"strict_min_version": "115.0"
+			"strict_min_version": "147.0",
+			"data_collection_permissions": false
 		}
 	}
 }
