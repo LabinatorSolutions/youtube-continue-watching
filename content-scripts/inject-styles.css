@@ -1,0 +1,133 @@
+/**
+ * YouTube Continue Watching - CSS Injection
+ * 
+ * Layer 1 defense: Immediately hide the pause dialog using CSS
+ * This provides instant protection before JavaScript initializes
+ * 
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ * Copyright (C) 2026 YouTube Continue Watching Contributors
+ */
+
+/* ==========================================================================
+   PRIMARY DIALOG SELECTORS - Known YouTube dialog containers
+   ========================================================================== */
+
+/* Hide YouTube pause dialog containers */
+ytd-popup-container,
+tp-yt-paper-dialog,
+.ytd-popup-container,
+yt-confirm-dialog-renderer,
+ytd-enforcement-message-view-model {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+}
+
+/* ==========================================================================
+   BACKDROP AND OVERLAY SELECTORS
+   ========================================================================== */
+
+/* Hide dialog backdrops/overlays */
+tp-yt-iron-overlay-backdrop,
+.scrim,
+.ytd-popup-container .scrim,
+iron-overlay-backdrop {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   POLYMER AND PAPER ELEMENT SELECTORS
+   ========================================================================== */
+
+/* Hide any paper-dialog instances used by YouTube */
+paper-dialog,
+tp-yt-paper-dialog,
+yt-dialog-overlay {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* ==========================================================================
+   ARIA-BASED FALLBACK SELECTORS
+   These target dialogs based on accessibility attributes for resilience
+   ========================================================================== */
+
+/* Target modal dialogs - JavaScript verifies content before hiding */
+[role="dialog"][aria-modal="true"]:not(#movie_player):not(.ytp-popup) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Target alertdialog elements that may be used for interruptions */
+[role="alertdialog"]:not(.ytp-popup) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* ==========================================================================
+   YOUTUBE-SPECIFIC PAUSE DIALOG SELECTORS
+   ========================================================================== */
+
+/* Target dialogs with specific confirm/cancel button patterns */
+yt-confirm-dialog-renderer,
+ytd-simple-confirmation-dialog-renderer {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide elements that typically contain "Continue watching" prompts */
+.yt-confirm-dialog-renderer,
+.ytd-popup-container[dialog] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* ==========================================================================
+   VIDEO PLAYER PROTECTION
+   Ensure these critical elements are NEVER hidden
+   ========================================================================== */
+
+/* Ensure video player is always interactive and visible */
+#movie_player,
+video,
+.html5-video-player,
+.ytp-popup,
+ytd-player {
+  pointer-events: auto !important;
+  /* Do NOT set display/visibility here - let YouTube handle it */
+}
+
+/* Protect player controls */
+.ytp-chrome-bottom,
+.ytp-chrome-top {
+  pointer-events: auto !important;
+}
+
+/* ==========================================================================
+   MOBILE-SPECIFIC SELECTORS (m.youtube.com)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  .mobile-popup-container,
+  .mobile-dialog-overlay,
+  .c3-modal-overlay {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Mobile confirmation dialogs */
+  .mobile-topbar-header-popup,
+  .dialog-container {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

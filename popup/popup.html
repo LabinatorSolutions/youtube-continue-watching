@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Continue Watching</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="icon-container">
+        <img src="../icons/icon-48.png" alt="Extension Icon" class="icon">
+      </div>
+      <h1>YouTube Continue Watching</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Toggle Switch -->
+      <div class="toggle-container">
+        <label class="toggle-label">
+          <span class="toggle-text">Extension Status</span>
+          <div class="toggle-switch">
+            <input type="checkbox" id="enableToggle" class="toggle-input">
+            <span class="toggle-slider"></span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Status Message -->
+      <div class="status-container">
+        <div id="statusIcon" class="status-icon">●</div>
+        <div id="statusText" class="status-text">Checking status...</div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-section">
+        <p class="info-text">
+          This extension prevents YouTube from showing the "Continue watching?" dialog, 
+          allowing uninterrupted playback.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#" id="helpLink" class="footer-link">Help</a>
+        <span class="separator">•</span>
+        <a href="#" id="aboutLink" class="footer-link">About</a>
+      </div>
+      <div class="version">v1.0.0</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
