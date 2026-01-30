@@ -42,10 +42,11 @@ Periodically simulates minimal user activity (mouse movement event) to reset You
 ### Firefox Desktop
 
 1. **Download the Extension**
-   - Clone this repository or download as ZIP
+   - [**Download from Mozilla Add-ons (Recommended)**](https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted)
+   - Or clone this repository:
    ```bash
-   git clone https://github.com/yourusername/youtube-continue-watching.git
-   cd youtube-continue-watching
+   git clone https://github.com/LabinatorSolutions/youtube-uninterrupted.git
+   cd youtube-uninterrupted
    ```
 
 2. **Load as Temporary Add-on** (for testing)
@@ -192,10 +193,10 @@ That's it. No access to browsing history, no access to other sites, no backgroun
 ### Project Structure
 
 ```
-youtube-continue-watching/
+youtube-uninterrupted/
 ├── manifest.json                    # Extension configuration
 ├── content-scripts/
-│   ├── youtube-continue.js          # Main logic (3 layers)
+│   ├── youtube-uninterrupted.js          # Main logic (3 layers)
 │   └── inject-styles.css            # CSS hiding layer
 ├── background/
 │   └── service-worker.js            # State management
@@ -214,8 +215,8 @@ youtube-continue-watching/
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/yourusername/youtube-continue-watching.git
-   cd youtube-continue-watching
+   git clone https://github.com/LabinatorSolutions/youtube-uninterrupted.git
+   cd youtube-uninterrupted
    ```
 
 2. **No Build Step Required**
@@ -227,7 +228,7 @@ youtube-continue-watching/
    - Load as temporary add-on (see Installation)
    - Open YouTube
    - Check browser console for `[YouTube Continue]` logs
-   - Enable debug mode by editing `CONFIG.DEBUG = true` in `youtube-continue.js`
+   - Enable debug mode by editing `CONFIG.DEBUG = true` in `youtube-uninterrupted.js`
 
 ### Code Quality
 
@@ -249,13 +250,13 @@ The extension implements three defensive layers:
 - Uses `!important` flags to override YouTube's inline styles
 - Targets multiple selectors for resilience
 
-**Layer 2: DOM Monitoring (`youtube-continue.js`)**
+**Layer 2: DOM Monitoring (`youtube-uninterrupted.js`)**
 - MutationObserver watches for dialog insertion
 - Debounced callbacks (100ms) for performance
 - Multiple selector strategies for reliability
 - Automatically removes or hides detected dialogs
 
-**Layer 3: Activity Simulation (`youtube-continue.js`)**
+**Layer 3: Activity Simulation (`youtube-uninterrupted.js`)**
 - Dispatches mouse movement events every 5 minutes
 - Resets YouTube's idle timer
 - Prevents dialog from triggering in the first place
@@ -329,7 +330,7 @@ Developed by the team behind [Labinator](https://Labinator.com).
 
 ## 📞 Support
 
-- **Issues:** https://github.com/LabinatorSolutions/youtube-continue-watching/issues
+- **Issues:** https://github.com/LabinatorSolutions/youtube-uninterrupted/issues
 
 ## ⚠️ Ethical Use & Responsibility
 

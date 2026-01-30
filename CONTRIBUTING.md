@@ -19,8 +19,8 @@ Guide for developers who want to modify, improve, or contribute to YouTube Unint
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/yourusername/youtube-continue-watching.git
-   cd youtube-continue-watching
+   git clone https://github.com/LabinatorSolutions/youtube-uninterrupted.git
+   cd youtube-uninterrupted
    ```
 
 2. **Load Extension in Firefox**
@@ -30,7 +30,7 @@ Guide for developers who want to modify, improve, or contribute to YouTube Unint
    - Select `manifest.json`
 
 3. **Enable Debug Mode**
-   - Edit `content-scripts/youtube-continue.js`
+   - Edit `content-scripts/youtube-uninterrupted.js`
    - Change `CONFIG.DEBUG = false` to `CONFIG.DEBUG = true`
    - Reload extension
 
@@ -41,14 +41,14 @@ Guide for developers who want to modify, improve, or contribute to YouTube Unint
 ## 📁 Project Structure
 
 ```
-youtube-continue-watching/
+youtube-uninterrupted/
 ├── manifest.json                 # Extension metadata & config
 │   ├── Defines permissions
 │   ├── Content script injection
 │   └── Background worker setup
 │
 ├── content-scripts/
-│   ├── youtube-continue.js       # Main logic (3 layers)
+│   ├── youtube-uninterrupted.js       # Main logic (3 layers)
 │   │   ├── Layer 1: CSS injection (via manifest)
 │   │   ├── Layer 2: DOM monitoring (MutationObserver)
 │   │   └── Layer 3: Activity simulation
@@ -77,7 +77,7 @@ youtube-continue-watching/
 
 ## 🔧 Key Components
 
-### 1. Content Script (`youtube-continue.js`)
+### 1. Content Script (`youtube-uninterrupted.js`)
 
 **Purpose:** Runs on every YouTube page to detect and remove dialog
 
@@ -186,7 +186,7 @@ service-worker.js updates storage
         ↓
 service-worker.js notifies all YouTube tabs
         ↓
-youtube-continue.js receives toggle state
+youtube-uninterrupted.js receives toggle state
         ↓
 CONFIG.enabled updated
         ↓
@@ -210,7 +210,7 @@ Layers activate/deactivate
 ### 2. Debug Mode Testing
 
 ```javascript
-// Enable in youtube-continue.js
+// Enable in youtube-uninterrupted.js
 CONFIG.DEBUG = true;
 
 // Then check console for:
@@ -257,7 +257,7 @@ If YouTube changes their dialog structure:
 To adjust how often activity is simulated:
 
 ```javascript
-// In youtube-continue.js
+// In youtube-uninterrupted.js
 ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes instead of 5
 ```
 
@@ -313,7 +313,7 @@ ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes instead of 5
 
 **Disable Debug Mode:**
 ```javascript
-// youtube-continue.js
+// youtube-uninterrupted.js
 CONFIG.DEBUG = false
 ```
 

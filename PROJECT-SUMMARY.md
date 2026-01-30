@@ -14,7 +14,7 @@ All requested files have been created and are production-ready.
 - Minimal permissions (storage + YouTube access only)
 - Browser compatibility: Firefox 115+
 
-✅ **content-scripts/youtube-continue.js** (8.2 KB, ~278 lines)
+✅ **content-scripts/youtube-uninterrupted.js** (8.2 KB, ~278 lines)
 - Three-layer defense architecture
 - Debug mode capability
 - Comprehensive error handling
@@ -133,10 +133,10 @@ All requested files have been created and are production-ready.
 Layer 1: CSS Injection (inject-styles.css)
    ↓ Instant hiding via CSS rules
    
-Layer 2: DOM Monitoring (youtube-continue.js)
+Layer 2: DOM Monitoring (youtube-uninterrupted.js)
    ↓ MutationObserver watches for dialog
    
-Layer 3: Activity Simulation (youtube-continue.js)
+Layer 3: Activity Simulation (youtube-uninterrupted.js)
    ↓ Prevents dialog trigger
    
 = Uninterrupted YouTube playback ✅
@@ -250,7 +250,7 @@ Submit to AMO → Review (1-3 days) → Public listing
 
 1. **Test Locally**
    ```bash
-   cd youtube-continue-watching
+   cd youtube-uninterrupted
    # Load in Firefox: about:debugging
    ```
 

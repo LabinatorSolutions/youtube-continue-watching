@@ -82,7 +82,7 @@ For testing, you can use these simple designs:
 
 Place your generated icons in:
 ```
-youtube-continue-watching/
+youtube-uninterrupted/
 └── icons/
     ├── icon-16.png
     ├── icon-48.png

@@ -14,13 +14,13 @@ Prevents YouTube from interrupting your videos with the "Continue watching?" dia
 ## 📁 Complete File Structure
 
 ```
-youtube-continue-watching/ (414 KB total)
+youtube-uninterrupted/ (414 KB total)
 │
 ├── 📄 manifest.json (1.2 KB)
 │   └── Extension configuration (Manifest V3)
 │
 ├── 📂 content-scripts/ (14 KB)
-│   ├── youtube-continue.js (8.4 KB)
+│   ├── youtube-uninterrupted.js (8.4 KB)
 │   │   └── Main logic: 3-layer defense system
 │   └── inject-styles.css (1.2 KB)
 │       └── CSS hiding layer
@@ -134,7 +134,7 @@ See `ANDROID-INSTALLATION.md` for complete guide.
 
 ### Core Functionality
 
-**`youtube-continue.js`** (278 lines)
+**`youtube-uninterrupted.js`** (278 lines)
 - CONFIG object with all settings
 - Three defense layers implementation
 - MutationObserver with debouncing
@@ -295,7 +295,7 @@ All three icon sizes generated:
 
 **Functionality Issues:**
 - See README.md → Troubleshooting
-- Enable debug mode in youtube-continue.js
+- Enable debug mode in youtube-uninterrupted.js
 - Check browser console for errors
 
 **Development Questions:**
@@ -371,7 +371,7 @@ Everything you need:
 
 ---
 
-**🚀 Start Testing:** `cd youtube-continue-watching` → Load in Firefox  
+**🚀 Start Testing:** `cd youtube-uninterrupted` → Load in Firefox  
 **📖 Read More:** See README.md for complete documentation  
 **🔧 Customize:** See CONTRIBUTING.md for development guide  
 

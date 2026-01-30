@@ -5,7 +5,7 @@
 1.  **Download or Clone**
     ```bash
     cd ~/Downloads
-    git clone https://github.com/yourusername/youtube-uninterrupted.git
+    git clone https://github.com/LabinatorSolutions/youtube-uninterrupted.git
     ```
 
 2.  **Load Extension**
@@ -108,10 +108,10 @@ The extension works out-of-the-box with no configuration needed!
 ## 📋 File Structure
 
 ```
-youtube-continue-watching/
+youtube-uninterrupted/
 ├── manifest.json              # Extension config
 ├── content-scripts/           # Content injected into YouTube
-│   ├── youtube-continue.js    # Main logic
+│   ├── youtube-uninterrupted.js    # Main logic
 │   └── inject-styles.css      # CSS hiding layer
 ├── background/
 │   └── service-worker.js      # State management

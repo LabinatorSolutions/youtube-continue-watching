@@ -3,7 +3,7 @@
 	"name": "YouTube Uninterrupted",
 	"version": "1.0.0",
 	"author": "YouTube Uninterrupted Contributors",
-	"homepage_url": "https://github.com/yourusername/youtube-continue-watching",
+	"homepage_url": "https://github.com/LabinatorSolutions/youtube-uninterrupted",
 	"description": "Prevents YouTube from pausing videos with the 'Continue watching?' dialog, allowing uninterrupted playback of music, podcasts, and long-form content.",
 	"icons": {
 		"16": "icons/icon-16.png",
@@ -31,7 +31,7 @@
 				"*://*.youtube.com/*"
 			],
 			"js": [
-				"content-scripts/youtube-continue.js"
+				"content-scripts/youtube-uninterrupted.js"
 			],
 			"css": [
 				"content-scripts/inject-styles.css"
@@ -46,7 +46,7 @@
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "youtube-continue-watching@example.com",
+			"id": "youtube-uninterrupted@example.com",
 			"strict_min_version": "147.0",
 			"data_collection_permissions": {
 				"required": [

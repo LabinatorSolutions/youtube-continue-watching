@@ -139,7 +139,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
 ## Console Testing (Debug Mode)
 
 - [ ] **Enable Debug Mode**
-  - [ ] Edit `youtube-continue.js`
+  - [ ] Edit `youtube-uninterrupted.js`
   - [ ] Change `CONFIG.DEBUG = true`
   - [ ] Reload extension
 

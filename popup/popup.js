@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	helpLink.addEventListener('click', (event) => {
 		event.preventDefault();
 		browser.tabs.create({
-			url: 'https://github.com/yourusername/youtube-continue-watching#troubleshooting'
+			url: 'https://github.com/LabinatorSolutions/youtube-uninterrupted#troubleshooting'
 		});
 	});
 
