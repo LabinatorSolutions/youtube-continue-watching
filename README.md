@@ -2,6 +2,11 @@
 
 A Firefox extension that prevents YouTube from interrupting your viewing experience with the "Continue watching?" dialog. Perfect for music playlists, podcasts, long-form content, and ambient videos.
 
+<a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted/">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Firefox_%22Get_the_add-on%22_badge.png"
+       alt="Get YouTube Uninterrupted Add-on for Firefox" />
+</a>
+
 ## 🎯 Purpose
 
 YouTube automatically pauses videos after a period of inactivity and displays a "Video paused. Continue watching?" prompt. This extension removes that interruption, allowing uninterrupted playback for legitimate use cases such as:
