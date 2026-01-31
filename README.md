@@ -42,7 +42,7 @@ Instantly hides the dialog using targeted CSS rules before JavaScript even loads
 A MutationObserver watches for the dialog being inserted into the page and removes it immediately.
 
 ### Layer 3: Activity Simulation
-Periodically simulates minimal user activity (mouse movement event) to reset YouTube's idle timer, preventing the dialog from triggering in the first place.
+Periodically simulates minimal user activity (mouse movement event) every minute to reset YouTube's idle timer, preventing the dialog from triggering in the first place.
 
 ## 📦 Installation
 
@@ -265,7 +265,7 @@ The extension implements three defensive layers:
 - Automatically removes or hides detected dialogs
 
 **Layer 3: Activity Simulation (`youtube-uninterrupted.js`)**
-- Dispatches mouse movement events every 5 minutes
+- Dispatches mouse movement events every minute
 - Resets YouTube's idle timer
 - Prevents dialog from triggering in the first place
 - Non-intrusive, doesn't interfere with actual user actions

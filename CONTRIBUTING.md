@@ -98,7 +98,7 @@ const CONFIG = {
   DIALOG_SELECTORS: [...],                // Dialog CSS selectors
   CONTINUE_BUTTON_SELECTORS: [...],       // Button selectors
   MUTATION_DEBOUNCE_MS: 100,              // Performance tuning
-  ACTIVITY_INTERVAL_MS: 5 * 60 * 1000,   // 5 minutes
+  ACTIVITY_INTERVAL_MS: 60 * 1000,        // 1 minute
   DEBUG: false                            // Console logging
 };
 ```
@@ -169,7 +169,7 @@ const observer = new MutationObserver((mutations) => {
 setInterval(() => {
   const event = new MouseEvent('mousemove', {...});
   document.dispatchEvent(event);
-}, 5 * 60 * 1000); // Every 5 minutes
+}, 60 * 1000); // Every minute
 ```
 - Prevents dialog from triggering
 - Simulates user activity
@@ -286,7 +286,7 @@ To adjust how often activity is simulated:
 
 ```javascript
 // In youtube-uninterrupted.js
-ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes instead of 5
+ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes (current default is 1 minute)
 ```
 
 ⚠️ **Note:** Too frequent = higher battery/CPU usage. Too rare = dialog might trigger.

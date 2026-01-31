@@ -77,7 +77,7 @@
 
 		// Performance settings
 		MUTATION_DEBOUNCE_MS: 50,
-		ACTIVITY_INTERVAL_MS: 5 * 60 * 1000, // 5 minutes
+		ACTIVITY_INTERVAL_MS: 60 * 1000, // 1 minute
 		VIDEO_CHECK_INTERVAL_MS: 2000, // Check video state every 2 seconds
 		SCAN_INTERVAL_MS: 5000, // Periodic full scan every 5 seconds
 
