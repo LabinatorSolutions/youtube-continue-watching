@@ -16,7 +16,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 Please do **NOT** report security vulnerabilities through public GitHub issues.
 
-Instead, please report them by emailing us at https://labinator.com/contact
+Instead, please report them through our contact form at https://labinator.com/contact
 
 You should expect to receive a response within 48 hours. If for some reason you do not, please follow up with us to ensure we received your original message.
 

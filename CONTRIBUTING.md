@@ -14,6 +14,7 @@ Guide for developers who want to modify, improve, or contribute to YouTube Unint
   - Browser Extensions (WebExtensions API)
   - DOM manipulation
   - CSS
+- [Bun](https://bun.sh/) (for linting/building)
 
 ### Setting Up Development Environment
 
@@ -219,7 +220,34 @@ CONFIG.DEBUG = true;
 // - Activity simulation logs
 ```
 
-### 3. Testing Checklist
+### 3. Automated Scripts (Recommended)
+
+This project uses `bun` scripts to simplify development tasks.
+
+1. **Install Dependencies**
+   ```bash
+   bun install
+   ```
+
+2. **Lint Code**
+   Check for common errors and manifest issues:
+   ```bash
+   bun run lint
+   ```
+
+3. **Typecheck Code**
+   Check for type errors in JavaScript files:
+   ```bash
+   bun run typecheck
+   ```
+
+4. **Build Package**
+   Create a production-ready ZIP file in the `web-ext-artifacts/` directory:
+   ```bash
+   bun run build
+   ```
+
+### 4. Testing Checklist
 
 See [TESTING-CHECKLIST.md](./TESTING-CHECKLIST.md) for comprehensive testing guide.
 

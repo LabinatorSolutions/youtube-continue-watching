@@ -8,7 +8,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
-	const toggle = document.getElementById('enableToggle');
+	const toggle = /** @type {HTMLInputElement} */ (document.getElementById('enableToggle'));
 	const statusIcon = document.getElementById('statusIcon');
 	const statusText = document.getElementById('statusText');
 	const githubLink = document.getElementById('githubLink');
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	 * Handle toggle switch changes
 	 */
 	toggle.addEventListener('change', async (event) => {
-		const enabled = event.target.checked;
+		const enabled = /** @type {HTMLInputElement} */ (event.target).checked;
 
 		try {
 			// Update background service worker
@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			updateUI(enabled);
 
 			// Show confirmation for a moment
-			const originalText = statusText.textContent;
 			statusText.textContent = enabled ? 'Enabled!' : 'Disabled!';
 			setTimeout(() => {
 				updateUI(enabled);

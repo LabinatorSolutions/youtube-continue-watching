@@ -15,6 +15,7 @@ yarn-error.log
 dist/
 build/
 *.zip
+web-ext-artifacts/
 
 # Local config (if any)
 local-config.json

@@ -77,7 +77,7 @@
 
 		// Performance settings
 		MUTATION_DEBOUNCE_MS: 50,
-		ACTIVITY_INTERVAL_MS: 60 * 1000, // 1 minute (more frequent for reliability)
+		ACTIVITY_INTERVAL_MS: 5 * 60 * 1000, // 5 minutes
 		VIDEO_CHECK_INTERVAL_MS: 2000, // Check video state every 2 seconds
 		SCAN_INTERVAL_MS: 5000, // Periodic full scan every 5 seconds
 
@@ -136,7 +136,7 @@
 	function safeQuerySelector(selector, parent = document) {
 		try {
 			return parent.querySelector(selector);
-		} catch (e) {
+		} catch (_e) {
 			return null;
 		}
 	}
@@ -147,7 +147,7 @@
 	function safeQuerySelectorAll(selector, parent = document) {
 		try {
 			return parent.querySelectorAll(selector);
-		} catch (e) {
+		} catch (_e) {
 			return [];
 		}
 	}
@@ -175,7 +175,7 @@
 		return CONFIG.PROTECTED_SELECTORS.some(selector => {
 			try {
 				return element.matches(selector) || element.closest(selector);
-			} catch (e) {
+			} catch (_e) {
 				return false;
 			}
 		});
@@ -200,7 +200,7 @@
 			const isDialogElement = CONFIG.DIALOG_SELECTORS.some(selector => {
 				try {
 					return element.matches && element.matches(selector);
-				} catch (e) {
+				} catch (_e) {
 					return false;
 				}
 			});
@@ -329,8 +329,8 @@
 				'tp-yt-iron-overlay-backdrop, .scrim, iron-overlay-backdrop, [part="backdrop"]'
 			);
 			backdrops.forEach(backdrop => {
-				backdrop.style.setProperty('display', 'none', 'important');
-				backdrop.style.setProperty('opacity', '0', 'important');
+				/** @type {HTMLElement} */(backdrop).style.setProperty('display', 'none', 'important');
+				/** @type {HTMLElement} */(backdrop).style.setProperty('opacity', '0', 'important');
 			});
 
 			log('Dialog removal strategies applied');
@@ -391,10 +391,10 @@
 							// Check if the node itself is a dialog
 							if (isPauseDialog(node)) {
 								removePauseDialog(node);
-							} else if (node.querySelector) {
+							} else if (/** @type {Element} */(node).querySelector) {
 								// Check children
 								for (const selector of CONFIG.DIALOG_SELECTORS) {
-									const dialogs = safeQuerySelectorAll(selector, node);
+									const dialogs = safeQuerySelectorAll(selector, /** @type {Document} */(node));
 									for (const dialog of dialogs) {
 										if (isPauseDialog(dialog)) {
 											removePauseDialog(dialog);

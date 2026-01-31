@@ -1,0 +1,23 @@
+{
+	"name": "youtube-uninterrupted",
+	"version": "1.4.0",
+	"type": "module",
+	"description": "Prevents YouTube from pausing videos with the 'Continue watching?' dialog.",
+	"scripts": {
+		"lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+		"lint:fix": "eslint . --fix",
+		"typecheck": "tsc --noEmit",
+		"build": "web-ext build --overwrite-dest",
+		"test": "bun run lint && bun run typecheck"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.39.2",
+		"@types/firefox-webext-browser": "^143.0.0",
+		"bun-types": "latest",
+		"eslint": "^9.39.2",
+		"globals": "^17.2.0",
+		"typescript": "^5.9.3",
+		"web-ext": "^9.2.0"
+	},
+	"private": true
+}
