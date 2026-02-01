@@ -9,7 +9,7 @@ Use this checklist to verify the YouTube Uninterrupted extension is working corr
   - [ ] All content-scripts files present
   - [ ] All popup files present
   - [ ] Background worker file present
-  - [ ] All three icon sizes present (16, 48, 128)
+  - [ ] icon.svg present
 
 - [ ] **Manifest Validation**
   - [ ] manifest.json is valid JSON (test with JSON validator)

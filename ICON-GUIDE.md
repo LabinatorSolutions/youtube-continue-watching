@@ -1,174 +1,92 @@
 # Icon Creation Guide
 
-This extension requires three icon sizes for Firefox:
+## Modern SVG Icons
 
-## Required Icons
+This extension uses a single **Scalable Vector Graphics (SVG)** file for its icon. Firefox automatically handles scaling this image to all necessary sizes (16px, 32px, 48px, 64px, 128px), ensuring crisp rendering on all high-DPI displays.
 
-1. **icon-16.png** - 16x16 pixels
-   - Used in: Extension toolbar (small displays)
-   
-2. **icon-48.png** - 48x48 pixels
-   - Used in: Extension toolbar (normal displays), popup header
-   
-3. **icon-128.png** - 128x128 pixels
-   - Used in: Firefox Add-ons manager, installation screen
+### Required File
+- **Filename:** `icon.svg`
+- **Location:** Root directory (`youtube-uninterrupted/icon.svg`)
+
+## Benefits of SVG
+
+1.  **Crispness**: Never pixelated, looks perfect on 4K/Retina displays.
+2.  **Simplicity**: Only one file to manage instead of 3-5 PNGs.
+3.  **Efficiency**: Tiny file size (often < 1KB).
+4.  **Dark Mode**: Can use CSS variables (context-fill) for adaptive colors (advanced).
 
 ## Design Recommendations
 
 ### Visual Concept
 The icon should represent:
-- YouTube (incorporate red color #FF0000)
-- "Continue" or "play" concept
-- Simple, recognizable at small sizes
+- **YouTube** (incorporate red color `#FF0000`)
+- **"Continue" or "Play"** concept
+- **Simple shapes** that remain readable when scaled down to 16x16px (toolbar size)
 
 ### Suggested Design Ideas
 
 **Option 1: Play Button with Continue Arrow**
-```
-Red circle background (#FF0000)
-White play triangle (▶)
-Small green checkmark or arrow overlay
-```
+- Red circle background (`#FF0000`)
+- White play triangle (▶)
+- Small green checkmark overlay
 
 **Option 2: YouTube Logo Variation**
-```
-Stylized play button
-Red and white color scheme
-Minimalist design
-```
+- Stylized play button
+- Red and white color scheme
+- Minimalist design
 
 **Option 3: Abstract Continuous Symbol**
-```
-Circular arrows (♻) or infinity symbol (∞)
-YouTube red color
-Clean, modern look
-```
+- Circular arrows (♻) or infinity symbol (∞)
+- YouTube red color
+- Clean, modern look
 
-## Creating Icons
+## Creating Your SVG
 
 ### Using Design Tools
 
-**Figma/Adobe XD/Sketch:**
-1. Create 128x128 artboard
-2. Design your icon
-3. Export as PNG at 128x128, 48x48, and 16x16
-4. Ensure transparent background (or solid color)
+**Figma / Adobe Illustrator / Inkscape:**
+1.  Create a square artboard (e.g., 128x128 or 512x512).
+2.  Design using vector shapes.
+3.  Combine paths where possible (minimize complex groups).
+4.  **Export as SVG**.
+5.  Ensure strict standard SVG code (avoid tool-specific metadata).
 
-**GIMP (Free):**
-1. File → New → 128x128 pixels
-2. Design icon on transparent layer
-3. Export as PNG
-4. Image → Scale Image for other sizes
-5. Save as icon-16.png, icon-48.png, icon-128.png
+**Coding Manually:**
+SVGs are just XML. You can write them by hand!
 
-**Online Tools:**
-- https://www.canva.com (Free, templates available)
-- https://www.figma.com (Free tier available)
-- https://favicon.io (Simple icon generator)
-
-### Quick Placeholder Icons
-
-For testing, you can use these simple designs:
-
-**Red Square with White Play Symbol:**
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Red Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#FF0000" />
+  
+  <!-- White Play Triangle -->
+  <path d="M50 40 L50 88 L88 64 Z" fill="#FFFFFF" />
+</svg>
 ```
-1. Create 128x128 image
-2. Fill with #FF0000
-3. Add white play triangle ▶ in center
-4. Export at all three sizes
-```
+
+### Constraints & Best Practices
+
+- **Aspect Ratio**: Must be 1:1 (Square).
+- **Padding**: Leave a small margin (padding) around your main shape so it doesn't get cut off when rounded.
+- **Complexity**: Keep it simple. Avoid complex filters/gradients if possible, as small sizes won't show them well.
+- **Testing**: Test at 16px size to ensure visibility.
 
 ## Installation
 
-Place your generated icons in:
-```
-youtube-uninterrupted/
-└── icons/
-    ├── icon-16.png
-    ├── icon-48.png
-    └── icon-128.png
-```
-
-## Testing Icons
-
-1. Load extension in Firefox
-2. Check toolbar - should show smallest appropriate icon (16 or 48)
-3. Open popup - should show 48x48 icon in header
-4. Go to about:addons - should show 128x128 icon
-
-## Design Guidelines (Firefox)
-
-- **Format:** PNG (supports transparency)
-- **Background:** Transparent or solid color
-- **Shape:** Square canvas, but design can be circular/rounded
-- **Clarity:** Must be recognizable at 16x16 size
-- **Colors:** High contrast for visibility
-- **Branding:** Should hint at YouTube without copyright infringement
-
-## Copyright Considerations
-
-⚠️ **Important:** Do NOT use:
-- Official YouTube logo
-- Google trademarks
-- Copyrighted imagery
-
-✅ **Safe to use:**
-- Generic play button symbols
-- Abstract representations
-- Original designs inspired by (not copying) YouTube's colors
-
-## Example CSS for Icon Generation
-
-If you want to generate icons programmatically:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    canvas {
-      border: 1px solid #ccc;
+1.  Save your file as `icon.svg`.
+2.  Place it in the extension root folder.
+3.  Ensure `manifest.json` points to it:
+    ```json
+    "icons": {
+      "16": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
     }
-  </style>
-</head>
-<body>
-  <canvas id="icon" width="128" height="128"></canvas>
-  <script>
-    const canvas = document.getElementById('icon');
-    const ctx = canvas.getContext('2d');
-    
-    // Red circle background
-    ctx.fillStyle = '#FF0000';
-    ctx.beginPath();
-    ctx.arc(64, 64, 60, 0, Math.PI * 2);
-    ctx.fill();
-    
-    // White play triangle
-    ctx.fillStyle = '#FFFFFF';
-    ctx.beginPath();
-    ctx.moveTo(50, 40);
-    ctx.lineTo(50, 88);
-    ctx.lineTo(88, 64);
-    ctx.closePath();
-    ctx.fill();
-    
-    // Download
-    // Right-click canvas → Save image as → icon-128.png
-  </script>
-</body>
-</html>
-```
+    ```
 
-Save this as `icon-generator.html`, open in browser, and download the generated icon.
+## Testing
 
-## Need Help?
-
-If you need assistance creating icons:
-1. Check Fiverr for affordable icon designers
-2. Use free icon generators online
-3. Ask in the project's GitHub Discussions
-4. Use emoji/Unicode symbols as temporary placeholders
-
----
-
-Remember: Icons are important for user experience, but for testing purposes, simple placeholders work fine!
+1.  Load the extension in Firefox (`about:debugging`).
+2.  **Toolbar Grid:** Check if the 16px icon in the toolbar is legible.
+3.  **Add-ons Manager:** Check `about:addons` for the large version.
+4.  **Popup:** Open the extension popup to see the medium version.

@@ -1,14 +1,18 @@
 {
 	"manifest_version": 3,
 	"name": "YouTube Uninterrupted",
-	"version": "1.4.0",
-	"author": "YouTube Uninterrupted Contributors",
+	"version": "1.5.0",
+	"author": "Labinator",
+	"developer": {
+		"name": "Labinator",
+		"url": "https://labinator.com/"
+	},
 	"homepage_url": "https://github.com/LabinatorSolutions/youtube-uninterrupted",
 	"description": "Prevents YouTube from pausing videos with the 'Continue watching?' dialog, allowing uninterrupted playback of music, podcasts, and long-form content.",
 	"icons": {
-		"16": "icons/icon-16.png",
-		"48": "icons/icon-48.png",
-		"128": "icons/icon-128.png"
+		"16": "icon.svg",
+		"48": "icon.svg",
+		"128": "icon.svg"
 	},
 	"permissions": [
 		"storage"
@@ -19,9 +23,9 @@
 	"action": {
 		"default_popup": "popup/popup.html",
 		"default_icon": {
-			"16": "icons/icon-16.png",
-			"48": "icons/icon-48.png",
-			"128": "icons/icon-128.png"
+			"16": "icon.svg",
+			"48": "icon.svg",
+			"128": "icon.svg"
 		},
 		"default_title": "YouTube Uninterrupted"
 	},

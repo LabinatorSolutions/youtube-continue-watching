@@ -1,6 +1,7 @@
 {
 	"name": "youtube-uninterrupted",
-	"version": "1.4.0",
+	"version": "1.5.0",
+	"author": "Labinator",
 	"type": "module",
 	"description": "Prevents YouTube from pausing videos with the 'Continue watching?' dialog.",
 	"scripts": {
@@ -15,7 +16,7 @@
 		"@types/firefox-webext-browser": "^143.0.0",
 		"bun-types": "latest",
 		"eslint": "^9.39.2",
-		"globals": "^17.2.0",
+		"globals": "^17.3.0",
 		"typescript": "^5.9.3",
 		"web-ext": "^9.2.0"
 	},

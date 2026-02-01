@@ -70,10 +70,7 @@ youtube-uninterrupted/
 │       ├── Toggle on/off
 │       └── Update UI
 │
-└── icons/
-    ├── icon-16.png               # Small toolbar icon
-    ├── icon-48.png               # Medium toolbar icon
-    └── icon-128.png              # Large add-ons manager icon
+└── icon.svg                      # Extension icon (scalable)
 ```
 
 ## 🔧 Key Components
@@ -336,7 +333,7 @@ ACTIVITY_INTERVAL_MS: 3 * 60 * 1000,  // 3 minutes (current default is 1 minute)
 **Update Version:**
 ```json
 // manifest.json
-"version": "1.1.0"  // Increment version
+"version": "1.5.0"  // Increment version
 ```
 
 **Disable Debug Mode:**
@@ -354,7 +351,7 @@ CONFIG.DEBUG = false
 
 ```bash
 # Create ZIP file (excluding dev files)
-zip -r youtube-uninterrupted-v1.4.0.zip . \
+zip -r youtube-uninterrupted-v1.5.0.zip . \
   -x "*.git*" \
   -x "*node_modules*" \
   -x "*.md" \

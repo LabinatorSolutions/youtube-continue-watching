@@ -2,14 +2,14 @@
 
 A Firefox extension that prevents YouTube from interrupting your viewing experience with the "Continue watching?" dialog. Perfect for music playlists, podcasts, long-form content, and ambient videos.
 
-<a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted/">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Firefox_%22Get_the_add-on%22_badge.png"
-       alt="Get YouTube Uninterrupted Add-on for Firefox" />
-</a>
+[![Firefox Add-on](https://img.shields.io/badge/Firefox_Add--on-Get_It_Now-blue.svg)](https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted/)
+[![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.5.0-green.svg)](manifest.json)
 
-**Current Version:** v1.4.0
 
-## 🎯 Purpose
+**Current Version:** v1.5.0
+
+## Purpose
 
 YouTube automatically pauses videos after a period of inactivity and displays a "Video paused. Continue watching?" prompt. This extension removes that interruption, allowing uninterrupted playback for legitimate use cases such as:
 
@@ -21,7 +21,7 @@ YouTube automatically pauses videos after a period of inactivity and displays a 
 
 **Note:** This extension does NOT block advertisements or interfere with YouTube's monetization. It only prevents the passive viewing timeout prompt.
 
-## ✨ Features
+## Features
 
 - ✅ **Automatic Dialog Removal** - Three-layer defense system ensures the dialog never appears
 - ✅ **Mobile & Desktop Support** - Works on both www.youtube.com and m.youtube.com
@@ -31,7 +31,7 @@ YouTube automatically pauses videos after a period of inactivity and displays a 
 - ✅ **Easy Toggle** - Simple on/off switch in the popup
 - ✅ **Privacy First** - No external connections, no telemetry, fully transparent
 
-## 🛡️ How It Works
+## How It Works
 
 The extension uses a multi-layered approach for maximum reliability:
 
@@ -44,7 +44,7 @@ A MutationObserver watches for the dialog being inserted into the page and remov
 ### Layer 3: Activity Simulation
 Periodically simulates minimal user activity (mouse movement event) every minute to reset YouTube's idle timer, preventing the dialog from triggering in the first place.
 
-## 📦 Installation
+## Installation
 
 ### Firefox Desktop
 
@@ -174,7 +174,7 @@ Periodically simulates minimal user activity (mouse movement event) every minute
 
 **Solution:** This is expected behavior. The dialog won't appear again during that session.
 
-## 🔐 Privacy Policy
+## Privacy Policy
 
 This extension is committed to your privacy:
 
@@ -212,10 +212,7 @@ youtube-uninterrupted/
 │   ├── popup.html                   # Popup UI
 │   ├── popup.js                     # Popup logic
 │   └── popup.css                    # Popup styles
-├── icons/
-│   ├── icon-16.png                  # Toolbar icon (small)
-│   ├── icon-48.png                  # Toolbar icon (medium)
-│   └── icon-128.png                 # Add-ons manager icon
+├── icon.svg                         # Extension icon (scalable)
 └── README.md                        # This file
 ```
 
@@ -247,7 +244,7 @@ youtube-uninterrupted/
 - ✅ **Performance Optimized** - Debouncing, minimal polling
 - ✅ **Cross-Browser Compatible** - Works on Firefox Desktop & Android
 
-## 📝 Technical Details
+## Technical Details
 
 ### Architecture
 
@@ -285,7 +282,7 @@ The extension implements three defensive layers:
 | Firefox Android | 147.0           | Fully supported |
 | Firefox Nightly | Latest          | Fully supported |
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -313,7 +310,7 @@ Contributions are welcome! Here's how you can help:
 - Test on both desktop and mobile
 - Preserve privacy-first principles
 
-## 📄 License
+## License
 
 GNU Affero General Public License v3.0
 
@@ -332,15 +329,15 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-## 🙏 Credits
+## Credits
 
-Developed by the team behind [Labinator](https://Labinator.com).
+Developed by [Labinator](https://Labinator.com).
 
-## 📞 Support
+## Support
 
 - **Issues:** https://github.com/LabinatorSolutions/youtube-uninterrupted/issues
 
-## ⚠️ Ethical Use & Responsibility
+## Ethical Use & Responsibility
 
 This extension is designed strictly to enhance the experience for valid users who are actively listening to or watching content but cannot interact with their device (e.g., while cooking, exercising, working, or sleeping).
 
@@ -351,7 +348,7 @@ This extension is designed strictly to enhance the experience for valid users wh
 
 We strongly encourage users to respect the platform and its creators. If you are no longer consuming content, please pause the video or close the tab manually.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This extension is not affiliated with, endorsed by, or officially connected to YouTube, Google, or Mozilla. It is an independent project created for educational purposes and personal use.
 
@@ -362,7 +359,3 @@ The extension respects YouTube's terms of service by:
 - Simply removing a UI element that interrupts playback
 
 Use responsibly and in accordance with YouTube's Terms of Service.
-
----
-
-**Enjoy uninterrupted YouTube! 🎉**
