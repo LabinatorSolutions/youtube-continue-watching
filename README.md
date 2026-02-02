@@ -4,10 +4,6 @@ A Firefox extension that prevents YouTube from interrupting your viewing experie
 
 [![Firefox Add-on](https://img.shields.io/badge/Firefox_Add--on-Get_It_Now-blue.svg)](https://addons.mozilla.org/en-US/firefox/addon/youtube-uninterrupted/)
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.5.0-green.svg)](manifest.json)
-
-
-**Current Version:** v1.5.0
 
 ## Purpose
 
